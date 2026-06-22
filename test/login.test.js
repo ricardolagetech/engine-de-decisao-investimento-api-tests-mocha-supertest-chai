@@ -1,8 +1,8 @@
 const request = require('supertest');
 const { expect } = require('chai');
 
-describe('Login', () => {
-    describe('POST /login', () => {
+describe('Authorization', () => {
+    describe('POST/auth/login', () => {
         it('Deve retornar 200 com token em string quando as credenciais são válidas', async () => {
             // Simule uma requisição POST para /login com credenciais válidas
             // com o supertest e capture a resposta

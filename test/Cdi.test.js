@@ -5,18 +5,18 @@ const { obterToken } = require('../helpers/autenticacao');
 const postCdi = require('../fixtures/postCdi.json');
 
 describe('CDI', () => {
+    
+    let token; // Variável para armazenar o token de autenticação
+    
+    //before é um hook do Mocha que é executado antes de todos os testes dentro do bloco describe.
+    //beforeEach é um hook do Mocha que é executado antes de cada teste dentro do bloco describe.
+    beforeEach (async () => {
+        // Antes de executar os testes, obtenha o token de autenticação
+        token = await obterToken("ricardo@email.com", "12345678");
+    });
+
+
     describe('POST /cdi', () => {
-
-        let token; // Variável para armazenar o token de autenticação
-        
-        //before é um hook do Mocha que é executado antes de todos os testes dentro do bloco describe.
-        //beforeEach é um hook do Mocha que é executado antes de cada teste dentro do bloco describe.
-        beforeEach (async () => {
-            // Antes de executar os testes, obtenha o token de autenticação
-            token = await obterToken("ricardo@email.com", "12345678");
-        });
-
-
         it('Deve retornar sucesso com 201 quando o valor configurado do CDI maior que zero ', async () => {
             //const token = await obterToken("ricardo@email.com", "12345678"); //chamando a função obterToken do arquivo autenticacao.js para capturar o token de autenticação
 

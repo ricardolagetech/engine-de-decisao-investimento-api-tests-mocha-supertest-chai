@@ -1,0 +1,7 @@
+{
+  "valorInicial": 10000,
+  "dataVencimento": "2027-12-31",
+  "tipoRemuneracao": "POS_FIXADO",
+  "percentualCDI": 110,
+  "cdi": 10.75
+}

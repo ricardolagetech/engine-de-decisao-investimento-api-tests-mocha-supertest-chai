@@ -1,0 +1,6 @@
+{
+  "valorInicial": 15000,
+  "dataVencimento": "2027-11-30",
+  "tipoRemuneracao": "PREFIXADO",
+  "taxaAnual": 12.5
+}
